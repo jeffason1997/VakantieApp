@@ -7,19 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.util.ArrayList;
 
 /**
  * Created by Jeffrey on 13-6-2017.
  */
 
-public class MainAdapter extends ArrayAdapter<VakantieItem> {
+class MainAdapter extends ArrayAdapter<VakantieItem> {
 
-    public MainAdapter(@NonNull Context context, ArrayList<VakantieItem> vakanties) {
+    MainAdapter(Context context, ArrayList<VakantieItem> vakanties) {
         super(context, 0, vakanties);
     }
 
+    @NonNull
     public View getView(int position, View convertView, ViewGroup parent) {
         VakantieItem vakantie = getItem(position);
 

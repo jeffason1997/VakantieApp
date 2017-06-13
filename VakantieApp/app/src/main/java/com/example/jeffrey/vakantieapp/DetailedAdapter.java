@@ -1,27 +1,27 @@
 package com.example.jeffrey.vakantieapp;
 
 import android.content.Context;
-import android.support.annotation.LayoutRes;
 import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
 import java.text.SimpleDateFormat;
-import java.util.List;
+import java.util.ArrayList;
+
 
 /**
  * Created by Jeffrey on 13-6-2017.
  */
 
-public class DetailedAdapter extends ArrayAdapter<Tijdvlak> {
+class DetailedAdapter extends ArrayAdapter<Tijdvlak> {
 
-    public DetailedAdapter(@NonNull Context context, @NonNull List<Tijdvlak> objects) {
+    DetailedAdapter(Context context, ArrayList<Tijdvlak> objects) {
         super(context, 0, objects);
     }
 
+    @NonNull
     public View getView(int position, View convertView, ViewGroup parent) {
         Tijdvlak tijdvlak = getItem(position);
 
